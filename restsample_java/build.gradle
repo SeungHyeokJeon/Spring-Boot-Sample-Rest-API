@@ -27,8 +27,24 @@ dependencies {
 //	entity-dto change
 	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.4.2.Final'
 	implementation group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.4.2.Final'
+
+//	querydsl
+	implementation group: 'com.querydsl', name: 'querydsl-jpa', version: '5.0.0'
+	annotationProcessor(
+			"javax.persistence:javax.persistence-api",
+			"javax.annotation:javax.annotation-api",
+			"com.querydsl:querydsl-apt:5.0.0:jpa")
 }
 
 test {
 	useJUnitPlatform()
+}
+
+// queryDSL이 생성하는 QClass 경로 설정
+sourceSets {
+	main {
+		java {
+			srcDirs = ["$projectDir/src/main/java", "$projectDir/build/generated"]
+		}
+	}
 }

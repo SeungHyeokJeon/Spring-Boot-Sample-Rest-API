@@ -2,8 +2,12 @@ package com.example.restsample.book.repositories;
 
 import com.example.restsample.entities.Books;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,4 +16,13 @@ public interface BooksRepository extends JpaRepository<Books, Long> {
     public Optional<Books> findById(Long id);
     public List<Books> findByTitle(String title);
     public List<Books> findByAuthor(String author);
+
+    @Modifying
+    @Transactional
+    @Query(" delete from Books m where m.id in :idList ")
+    public void deleteByIds(@Param("idList") List<Long> idList);
+
+    // Validation
+    @Query(" select m.id from Books m where m.id=:entityId ")
+    public String entityValidation(@Param("entityId") Long entityId);
 }
