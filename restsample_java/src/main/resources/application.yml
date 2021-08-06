@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+#  jpa settings
+  jpa:
+    properties.hibernate.format_sql: true
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  db settings
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://127.0.0.1:5432/wow
+    username: postgres
+    password: 1234
+    driverClassName: org.postgresql.Driver
+    initialization-mode: always
+    sql-script-encoding: utf-8
