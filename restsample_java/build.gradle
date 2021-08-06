@@ -13,13 +13,20 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-//	spring-boot-starter-data-jpa
-//	postgresql
-//	lombok
-//	CORS Settings 포함
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.3'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.5.3'
+	testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.5.3'
+
+//	ORM
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.5.3'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23'
+
+//	getter/setter
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+
+//	entity-dto change
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.4.2.Final'
+	implementation group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.4.2.Final'
 }
 
 test {
