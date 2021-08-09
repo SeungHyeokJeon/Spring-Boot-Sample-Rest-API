@@ -3,6 +3,7 @@
 
 # Requirements
 - Spring Boot 2.5.3
+- Gradle
 - OpenJDK 11
 - PostgreSQL 13.3 
 
