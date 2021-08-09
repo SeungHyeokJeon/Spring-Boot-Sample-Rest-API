@@ -1,8 +1,9 @@
 # Spring-Boot-Sample-Rest-API
-- Spring Boot를 사용하여 Java와 Kotlin 언어로 간단한 REST API를 구현한 예제입니다.
+- Spring Boot를 사용하여 Java로 간단한 REST API를 구현한 예제입니다.
 - `/rest_api_sample_test.json` 파일을 talend api tester등 각종 api tester에서 import하여 테스트 할 수 있습니다.
 
 # Requirements
+
 - Spring Boot 2.5.3
 - Gradle 7.1.1
 - OpenJDK 11
