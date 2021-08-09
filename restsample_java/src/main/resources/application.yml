@@ -12,9 +12,11 @@ spring:
 #  db settings
   datasource:
     platform: postgres
+#    db info sample begin
     url: jdbc:postgresql://127.0.0.1:5432/wow
     username: postgres
     password: 1234
+#    db info sample end
     driverClassName: org.postgresql.Driver
     initialization-mode: always
     sql-script-encoding: utf-8
