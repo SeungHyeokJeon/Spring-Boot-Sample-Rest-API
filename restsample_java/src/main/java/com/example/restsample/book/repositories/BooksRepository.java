@@ -1,6 +1,8 @@
 package com.example.restsample.book.repositories;
 
+import com.example.restsample.book.repositories.custom.BooksRepositoryCustom;
 import com.example.restsample.entities.Books;
+import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -12,8 +14,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface BooksRepository extends JpaRepository<Books, Long> {
-    public Optional<Books> findById(Long id);
+public interface BooksRepository extends JpaRepository<Books, Long>, BooksRepositoryCustom {
+    @NonNull
+    public Optional<Books> findById(@NonNull Long id);
     public List<Books> findByTitle(String title);
     public List<Books> findByAuthor(String author);
 
