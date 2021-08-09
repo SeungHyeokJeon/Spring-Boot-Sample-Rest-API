@@ -4,7 +4,7 @@
 
 # Requirements
 - Spring Boot 2.5.3
-- Gradle
+- Gradle 7.1.1
 - OpenJDK 11
 - PostgreSQL 13.3 
 
@@ -26,4 +26,3 @@
 
 - CRUD
 - pagination
-
