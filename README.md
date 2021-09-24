@@ -21,7 +21,24 @@
   - QueryDSL 적용전 반드시 Intellij 기준 Gradle-Tasks-other-compileJava 실행하여 Q클래스 생성해야함
 
 # Project Structure
-- to be added
+```plain text
+src
+└─── main
+     ├─── java.com.example
+     │    ├─── DemoApplication.java
+     │    ├─── doamain1
+     │    │    ├─── controller
+     │    │    ├─── dto
+     │    │    ├─── mapper
+     │    │    └─── repository
+     │    │         └─── custom
+     │    │              └─── implementation
+     │    │    └─── service
+     │    │         └─── implementation
+     │    └─── entities
+     └─── resource
+          └─── application.yml
+```
 
 # Implement Function
 
